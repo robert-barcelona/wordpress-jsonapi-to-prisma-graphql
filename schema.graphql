@@ -1,0 +1,18 @@
+type Query {
+    posts: [Post!] !
+    post(id: ID!): Post
+}
+
+type Post {
+    date: String!
+    date_gmt: String!
+    id: Int!
+    link: String!
+    modified: String!
+    title: RenderedString!
+    content: RenderedString!
+}
+
+type RenderedString {
+    rendered: String
+}
