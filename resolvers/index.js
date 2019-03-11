@@ -1,17 +1,9 @@
-const axios = require('axios')
-
-const baseURL = 'http://localhost/wordpress/wp-json/wp/v2'
-
+const {getPosts} = require('../api/')
 const resolvers = {
   Query: {
-    posts: async () => {
-      try {
-        const results = await axios.get(`${baseURL}/posts`)
-        return results.data
-      } catch (e) {
-        console.error(e.toString())
-      }
-    },
+    posts: async (parent, args)=> {const results =await getPosts()
+    console.log(results)
+    return results},
     post: async (parent, args) => {
       const {id} = args
       try {
