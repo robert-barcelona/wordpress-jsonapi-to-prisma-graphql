@@ -14,7 +14,12 @@ and start server
 
 Specify Wordpress JSON API URL in `.env`
 
+`WP_JSON_API_SERVICE=http://localhost/wordpress`
 
+This url will form the base for the complete JSON API url, which will be of the form `http://localhost/wordpress/wp-json/wp/v2"`
+
+
+The server will run on port 4000
 
 **Built With**
 
