@@ -1,6 +1,8 @@
 const axios = require('axios')
+require('dotenv').config()
 
-const baseURL = 'http://localhost/wordpress/wp-json/wp/v2'
+
+const baseURL = process.env.WP_JSON_API_SERVICE
 
 const resolvers = {
   Query: {
